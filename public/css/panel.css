@@ -1,0 +1,11 @@
+.panel-default
+{
+    padding: 0;
+    background-color: #34495e;
+    border: none;
+}
+
+.hours_logged
+{
+    height: 400px;
+}
