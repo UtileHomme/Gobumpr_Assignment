@@ -1,4 +1,4 @@
-<!-- For the Registration page -->
+<!--Basic foundation for the registration page -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -94,7 +94,7 @@
     body {
         position: relative;
         height: 100%;
-        background: url(../images/yogaimages/yoga9.jpg);
+        background: url(../images/restaurant_images/rest9.jpg);
         background-position: center center;
         background-repeat:  no-repeat;
         background-attachment: fixed;
@@ -719,7 +719,7 @@ font-size: 13px;
                                     <ul class="nav navbar-nav navbar-right">
                                         <li><a class="smoth-scroll" href="{{ route('admin.login') }}">Login</a>
                                         </li>
-                                        <li><a class="smoth-scroll" href="{{ route('trainee.register') }}">Register</a>
+                                        <li><a class="smoth-scroll" href="{{ route('user.register') }}">Register</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -746,22 +746,7 @@ font-size: 13px;
         </div>
 
     </header>
-    <!-- <div class="">
-    @if (Route::has('login'))
 
-    <div class="top-left links">
-    <a href="{{ url('/') }}" class="navbar_style yoga_style top_left">Restaurant Finder</a>
-</div>
-<div class="top-right links">
-@if (Auth::check())
-<a href="{{ url('/home') }}">Home</a>
-@else
-<a href="{{ route('admin.login') }}" class="navbar_style">Login</a>
-<a href="{{ route('trainee.register') }}"class="navbar_style">Register</a>
-@endif
-</div>
-@endif
-</div> -->
 
 
 

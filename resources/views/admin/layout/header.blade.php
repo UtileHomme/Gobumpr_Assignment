@@ -28,7 +28,6 @@
         <!-- User Account: style can be found in dropdown.less -->
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <!-- <img src="{{ asset('traineee/dist/img/spiderman.jpg') }}" class="user-image" alt="User Image"> -->
             <img src="{{ asset(Storage::disk('local')->url($admin_image)) }}" class="user-image" alt="User Image">
 
     <span class="hidden-xs">Hello {{$logged_in_user}}</span>

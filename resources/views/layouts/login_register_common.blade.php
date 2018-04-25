@@ -958,7 +958,7 @@ padding-right: 0px;
                                     <ul class="nav navbar-nav navbar-right">
                                         <li><a class="smoth-scroll" href="{{ route('admin.login') }}">Login</a>
                                         </li>
-                                        <li><a class="smoth-scroll" href="{{ route('trainee.register') }}">Register</a>
+                                        <li><a class="smoth-scroll" href="{{ route('user.register') }}">Register</a>
                                         </li>
                                     </ul>
                                 </div>

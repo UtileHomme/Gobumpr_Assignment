@@ -1,4 +1,4 @@
-@extends('traineee.layout.app')
+@extends('restaurant.layout.app')
 
 
 @section('scripts')
@@ -12,7 +12,7 @@
 
     <section class="content">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6 col-lg-6 col-md-offset-1">
 
                 <div class="login-box">
                   <div class="login-logo">
@@ -29,7 +29,7 @@
                   <!-- /.login-logo -->
                   <div class="login-box-body">
 
-                    <form action="{{route('traineechangepassword')}}" method="post" role="form" class="form-horizontal">
+                    <form action="{{route('userchangepassword')}}" method="post" role="form" class="form-horizontal">
                         {{csrf_field()}}
                         <input type="hidden" name="name" value="{{ Auth::guard('admin')->user()->name }}" >
 

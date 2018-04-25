@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="appointment-w3" style="opacity:0.7;">
-    <form action="{{ route('trainee.registered')}}" method="post">
+    <form action="{{ route('user.registered')}}" method="post">
         {{ csrf_field() }}
 
         <h3 class="header-w3ls reg">

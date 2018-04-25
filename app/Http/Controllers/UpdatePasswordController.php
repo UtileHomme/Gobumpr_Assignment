@@ -12,20 +12,18 @@ use Auth;
 
 class UpdatePasswordController extends Controller
 {
-    public function traineeindex()
+    public function userindex()
     {
         $logged_in_user = Auth::guard('admin')->user()->name;
 
         $adminid = DB::table('admins')->where('name',$logged_in_user)->value('id');
 
-        $trainee_id = DB::table('admins')->where('name',$logged_in_user)->value('id');
+        $user_image = DB::table('user_details')->where('id',$adminid)->value('profile_image');
 
-        $trainee_image = DB::table('trainee_details')->where('id',$trainee_id)->value('profile_image');
-
-        return view('traineee/password/change-password',compact('trainee_image','logged_in_user'));
+        return view('restaurant/password/change-password',compact('user_image','logged_in_user'));
     }
 
-    public function traineeupdate(Request $request)
+    public function userupdate(Request $request)
     {
         $this->validate($request, [
             'old' => 'required',
@@ -57,7 +55,7 @@ class UpdatePasswordController extends Controller
         {
             $request->session()->flash('failure', 'Your password has not been changed.');
 
-            return redirect('traineechangepassword');
+            return redirect('userchangepassword');
         }
     }
 

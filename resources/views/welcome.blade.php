@@ -98,7 +98,7 @@
                                         </li> -->
                                         <li><a class="smoth-scroll" href="{{ route('admin.login') }}">Login</a>
                                         </li>
-                                        <li><a class="smoth-scroll" href="{{ route('trainee.register') }}">Register</a>
+                                        <li><a class="smoth-scroll" href="{{ route('user.register') }}">Register</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -128,23 +128,9 @@
 
     </header>
 
-
-
-
-
-
-
-
-
-    <!-- Back to Top Start -->
-    <a href="#" class="scroll-to-top"><i class="fa fa-angle-up"></i></a>
-    <!-- Back to Top End -->
-
-
     <!-- All Javascript Plugins  -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/plugin.js"></script>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyC0HAKwKinpoFKNGUwRBgkrKhF-sIqFUNA"></script>
 
     <!-- Main Javascript File  -->
     <script type="text/javascript" src="js/scripts.js"></script>

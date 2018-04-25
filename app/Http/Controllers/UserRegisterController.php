@@ -9,11 +9,11 @@ use App\role_admin;
 use DB;
 use Session;
 
-class TraineeRegisterController extends Controller
+class UserRegisterController extends Controller
 {
     public function showRegistrationForm()
    {
-       return view('traineee.trainee_register');
+       return view('restaurant.user_register');
    }
 
    public function register(Request $request)
@@ -29,23 +29,14 @@ array(
        $email = $request->email;
        $password = bcrypt($request->password);
 
-       $trainee_default_image = 'public/'.rand(1,3).'.png';
+       $user_default_image = 'public/'.rand(1,3).'.png';
 
-       // dd($trainee_default_image);
-    //    Admin::create([
-    //        'name' => $name,
-    //        'email' => $email,
-    //        'password' => $password,
-    //    ]);
+
 
     DB::table('admins')->insert(
     ['name' => $name, 'email' => $email,'password'=>$password]);
 
-    $trainee_id = DB::table('admins')->max('id');
 
-       // $roles = new role;
-       // $roles->name = "Trainee";
-       // $roles->save();
 
        $role_id = 2;
        $admin_id = DB::table('admins')->max('id');
@@ -56,8 +47,8 @@ array(
        $role_admin->save();
 
 
-       DB::table('trainee_details')->insert(
-       ['trainee_name' => $name, 'trainee_emailid' => $email,'id'=>$trainee_id,'profile_image'=>$trainee_default_image]);
+       DB::table('user_details')->insert(
+       ['user_name' => $name, 'user_emailid' => $email,'profile_image'=>$user_default_image,'user_id'=>$admin_id]);
 
        Session::flash('message','You have been Registered Successfully!! Please Login Now!!');
        return redirect()->route('admin.login');
@@ -65,12 +56,12 @@ array(
 
    }
 
-   public function validation($request)
-   {
-       return $this->validate($request, [
-           'name' => 'required|string|max:255',
-           'email' => 'required|string|email|max:255|unique:admins',
-           'password' => 'required|string|min:6|confirmed',
-       ]);
-   }
+   // public function validation($request)
+   // {
+   //     return $this->validate($request, [
+   //         'name' => 'required|string|max:255',
+   //         'email' => 'required|string|email|max:255|unique:admins',
+   //         'password' => 'required|string|min:6|confirmed',
+   //     ]);
+   // }
 }
